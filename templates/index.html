@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>SuperStore Customer Query</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static',filename='css/main.css') }}"
+    />
+  </head>
+  <body>
+    <div class="form-container">
+      <div class="title-container">
+        <h1 class="title">
+          Query<br />
+          Customer Details
+        </h1>
+      </div>
+      <form action="/fetch-orders" method="post">
+        <label for="CustomerID" class="input-label">Enter Customer ID</label>
+        <input
+          type="text"
+          id="customerID"
+          name="customerID"
+          required
+          class="input"
+        />
+        <button type="submit" class="btn">Search</button>
+      </form>
+    </div>
+  </body>
+</html>
